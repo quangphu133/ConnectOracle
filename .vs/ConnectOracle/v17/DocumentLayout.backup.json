@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "D:\\BMCSDL\\Github\\ConnectOracle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|D:\\BMCSDL\\Github\\ConnectOracle\\connectoracle\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|d:\\bmcsdl\\github\\connectoracle\\connectoracle\\formmahoades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\formmahoades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|d:\\bmcsdl\\github\\connectoracle\\connectoracle\\formmahoades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\formmahoades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|d:\\bmcsdl\\github\\connectoracle\\connectoracle\\formmahoades.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\formmahoades.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|D:\\BMCSDL\\Github\\ConnectOracle\\connectoracle\\desoracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\desoracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|D:\\BMCSDL\\Github\\ConnectOracle\\connectoracle\\formmahoavagiaima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\formmahoavagiaima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|d:\\bmcsdl\\github\\connectoracle\\connectoracle\\desoracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\desoracle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|D:\\BMCSDL\\Github\\ConnectOracle\\connectoracle\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|d:\\bmcsdl\\github\\connectoracle\\connectoracle\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|D:\\BMCSDL\\Github\\ConnectOracle\\connectoracle\\formhienthi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|D:\\BMCSDL\\Github\\ConnectOracle\\connectoracle\\formmahoavagiaima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\formmahoavagiaima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|D:\\BMCSDL\\Github\\ConnectOracle\\connectoracle\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9429B843-85DF-4021-8950-8588CC062D6B}|ConnectOracle\\ConnectOracle.csproj|solutionrelative:connectoracle\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,20 +58,58 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormMaHoaDes.cs",
+              "DocumentMoniker": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormMaHoaDes.cs",
+              "RelativeDocumentMoniker": "ConnectOracle\\FormMaHoaDes.cs",
+              "ToolTip": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormMaHoaDes.cs",
+              "RelativeToolTip": "ConnectOracle\\FormMaHoaDes.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAUwMcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:22:44.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "FormMaHoaDes.Designer.cs",
+              "DocumentMoniker": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormMaHoaDes.Designer.cs",
+              "RelativeDocumentMoniker": "ConnectOracle\\FormMaHoaDes.Designer.cs",
+              "ToolTip": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormMaHoaDes.Designer.cs",
+              "RelativeToolTip": "ConnectOracle\\FormMaHoaDes.Designer.cs",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAiwGABAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:33:44.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormMaHoaDes.cs [Design]",
+              "DocumentMoniker": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormMaHoaDes.cs",
+              "RelativeDocumentMoniker": "ConnectOracle\\FormMaHoaDes.cs",
+              "ToolTip": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormMaHoaDes.cs [Design]",
+              "RelativeToolTip": "ConnectOracle\\FormMaHoaDes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:22:26.716Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DesOracle.cs",
               "DocumentMoniker": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\DesOracle.cs",
               "RelativeDocumentMoniker": "ConnectOracle\\DesOracle.cs",
               "ToolTip": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\DesOracle.cs",
               "RelativeToolTip": "ConnectOracle\\DesOracle.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAASwCQAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAUwKAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T17:56:45.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "FormHienThi.cs",
               "DocumentMoniker": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormHienThi.cs",
               "RelativeDocumentMoniker": "ConnectOracle\\FormHienThi.cs",
@@ -71,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FormMaHoavaGiaiMa.cs",
               "DocumentMoniker": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormMaHoavaGiaiMa.cs",
               "RelativeDocumentMoniker": "ConnectOracle\\FormMaHoavaGiaiMa.cs",
@@ -84,13 +134,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\Login.cs",
               "RelativeDocumentMoniker": "ConnectOracle\\Login.cs",
               "ToolTip": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\Login.cs",
               "RelativeToolTip": "ConnectOracle\\Login.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAkwAEBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAOwAAAAAAAAAAADwvwkBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-01T09:32:22.537Z",
               "EditorCaption": ""
@@ -109,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "FormMaHoavaGiaiMa.cs [Design]",
               "DocumentMoniker": "D:\\BMCSDL\\Github\\ConnectOracle\\ConnectOracle\\FormMaHoavaGiaiMa.cs",
               "RelativeDocumentMoniker": "ConnectOracle\\FormMaHoavaGiaiMa.cs",

@@ -159,3 +159,4 @@ D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.pdb
 D:\BMCSDL\Github\ConnectOracle\ConnectOracle\bin\Debug\ConnectOracle.exe.config
 D:\BMCSDL\Github\ConnectOracle\ConnectOracle\bin\Debug\ConnectOracle.exe
 D:\BMCSDL\Github\ConnectOracle\ConnectOracle\bin\Debug\ConnectOracle.pdb
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.FormMaHoaDES.resources

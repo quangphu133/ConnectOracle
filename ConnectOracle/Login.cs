@@ -254,5 +254,20 @@ namespace ConnectOracle
                 f.ShowDialog(this);
             }
         }
+
+        private void btnMaHoaGiaiMaDES_Click(object sender, EventArgs e)
+        {
+            if (!Database.IsConnected())
+            {
+                MessageBox.Show("Vui lòng đăng nhập Oracle trước khi sử dụng Mã hóa/Giải mã.");
+                return;
+            }
+
+            using (var f = new FormMaHoaDES())
+            {
+                f.StartPosition = FormStartPosition.CenterParent;
+                f.ShowDialog(this);
+            }
+        }
     }
 }
