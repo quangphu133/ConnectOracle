@@ -53,12 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
-    <Compile Include="DesOracle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DesOracle.Designer.cs">
-      <DependentUpon>DesOracle.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DesOracle.cs" />
     <Compile Include="FormMaHoavaGiaiMa.cs">
       <SubType>Form</SubType>
     </Compile>

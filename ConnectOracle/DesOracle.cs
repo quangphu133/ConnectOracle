@@ -21,7 +21,6 @@ namespace ConnectOracle
 
         public byte[] EncryptDES(string plaintext, string prikey)
         {
-            OracleConnection conn;
             try
             {
                 string Function = "DES.ENCRYPT";

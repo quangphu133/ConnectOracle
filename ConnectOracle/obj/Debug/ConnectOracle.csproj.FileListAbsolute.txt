@@ -147,3 +147,15 @@ C:\Users\Administrator\Desktop\DoAn_Nhom7_Tuan8\ConnectOracle\ConnectOracle\obj\
 C:\Users\Administrator\Desktop\DoAn_Nhom7_Tuan8\ConnectOracle\ConnectOracle\obj\Debug\ConnectO.9D8410F6.Up2Date
 C:\Users\Administrator\Desktop\DoAn_Nhom7_Tuan8\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.exe
 C:\Users\Administrator\Desktop\DoAn_Nhom7_Tuan8\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.pdb
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.csproj.AssemblyReference.cache
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.FormHienThi.resources
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.RegisterForm.resources
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.Login.resources
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.Properties.Resources.resources
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.csproj.GenerateResource.cache
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.csproj.CoreCompileInputs.cache
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.exe
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\obj\Debug\ConnectOracle.pdb
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\bin\Debug\ConnectOracle.exe.config
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\bin\Debug\ConnectOracle.exe
+D:\BMCSDL\Github\ConnectOracle\ConnectOracle\bin\Debug\ConnectOracle.pdb
