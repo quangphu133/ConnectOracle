@@ -1,2 +1,2 @@
 # ConnectOracle
-Kết nối đến Oracle
+Using c# connect to Oracle
