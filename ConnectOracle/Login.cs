@@ -18,40 +18,58 @@ namespace ConnectOracle
             CenterToScreen();
             textBox5.PasswordChar = '*';
         }
-            bool Check_Textbox(string host, string port, string sid, string user, string pass)
+        bool Check_Textbox(string host, string port, string sid, string user, string pass)
+        {
+            if (host == "")
             {
-                if (host == "")
-                {
-                    MessageBox.Show("Chưa điền thông tin Host");
-                    txt_host.Focus();
-                    return false;
-                }
-                else if (port == "")
-                {
-                    MessageBox.Show("Chưa điền thông tin Port");
-                    txt_port.Focus();
-                    return false;
-                }
-                else if (sid == "")
-                {
-                    MessageBox.Show("Chưa điền thông tin Sid");
-                    txt_sid.Focus();
-                    return false;
-                }
-                else if (user == "")
-                {
-                    MessageBox.Show("Chưa điền thông tin user");
-                    txt_user.Focus();
-                    return false;
-                }
-                else if (pass == "")
-                {
-                    MessageBox.Show("Chưa điền thông tin Pass");
-                    textBox5.Focus();
-                    return false;
-                }
-                return true;
+                MessageBox.Show("Chưa điền thông tin Host");
+                txt_host.Focus();
+                return false;
             }
+            else if (port == "")
+            {
+                MessageBox.Show("Chưa điền thông tin Port");
+                txt_port.Focus();
+                return false;
+            }
+            else if (sid == "")
+            {
+                MessageBox.Show("Chưa điền thông tin Sid");
+                txt_sid.Focus();
+                return false;
+            }
+            else if (user == "")
+            {
+                MessageBox.Show("Chưa điền thông tin user");
+                txt_user.Focus();
+                return false;
+            }
+            else if (pass == "")
+            {
+                MessageBox.Show("Chưa điền thông tin Pass");
+                textBox5.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        // Tạo key ngẫu nhiên cho mã hóa cộng (1-95)
+        private int GenerateRandomAdditiveKey()
+        {
+            Random rand = new Random();
+            return rand.Next(1, 96); // 1 đến 95
+        }
+
+        // Tạo key ngẫu nhiên cho mã hóa nhân (các số nguyên tố cùng nhau với 95)
+        private int GenerateRandomMultiplicativeKey()
+        {
+            // Các key hợp lệ cho multiplicative cipher với modulo 95
+            // Phải là các số nguyên tố cùng nhau với 95 (95 = 5 × 19)
+            int[] validKeys = { 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 16, 17, 18, 21, 22, 23, 24, 26, 27, 28, 29, 31, 32, 33, 34, 36, 37, 38, 39, 41, 42, 43, 44, 46, 47, 48, 49, 51, 52, 53, 54, 56, 57, 58, 59, 61, 62, 63, 64, 66, 67, 68, 69, 71, 72, 73, 74, 76, 77, 78, 79, 81, 82, 83, 84, 86, 87, 88, 89, 91, 92, 93, 94 };
+            Random rand = new Random();
+            int index = rand.Next(validKeys.Length);
+            return validKeys[index];
+        }
 
         private void label1_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
@@ -67,83 +85,113 @@ namespace ConnectOracle
 
             if (Check_Textbox(host, port, sid, user, pass))
             {
-                int keyMaHoaCong;
-                int keyMahoaNhan;
-                string encryptedPass = MaHoaCong(pass, out keyMaHoaCong);
-                string encryptedPass2 = MaHoaNhan(pass, out keyMahoaNhan);
                 Database.Set_Database(host, port, sid, user, pass);
                 if (Database.Connect())
                 {
-                    OracleConnection c = Database.Get_Connect();
-                    MessageBox.Show("Dang nhap thanh cong\nServerVersion: " + c.ServerVersion +
-                        "\nMat khau ma hoa cong (Key=" + keyMaHoaCong + "): " + encryptedPass +
-                        "\nMat khau ma hoa nhan (Key=" + keyMahoaNhan + "): " + encryptedPass2);
+                    try
+                    {
+                        OracleConnection c = Database.Get_Connect();
+
+                        // Tạo key ngẫu nhiên
+                        int additiveKey = GenerateRandomAdditiveKey();
+                        int multiplicativeKey = GenerateRandomMultiplicativeKey();
+
+                        // Sử dụng các hàm mã hóa từ Oracle SQL với key ngẫu nhiên
+                        string encryptedAdditive = GetEncryptedPassword(pass, "additive", additiveKey);
+                        string encryptedMultiplicative = GetEncryptedPassword(pass, "multiplicative", multiplicativeKey);
+
+                        MessageBox.Show("Đăng nhập thành công\nServerVersion: " + c.ServerVersion +
+                            "\nMật khẩu mã hóa cộng (Key=" + additiveKey + "): " + encryptedAdditive +
+                            "\nMật khẩu mã hóa nhân (Key=" + multiplicativeKey + "): " + encryptedMultiplicative);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi mã hóa mật khẩu: " + ex.Message);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Dang nhap that bai");
+                    MessageBox.Show("Đăng nhập thất bại");
                 }
             }
         }
 
-        private int GenerateRandomAdditiveKey()
+        // Hàm gọi các function mã hóa từ Oracle
+        private string GetEncryptedPassword(string password, string encryptType, int key)
         {
-            Random rand = new Random();
-            return rand.Next(1, 26);
-        }
-
-        private string MaHoaCong(string password, out int key)
-        {
-            key = GenerateRandomAdditiveKey();
-            StringBuilder encrypted = new StringBuilder();
-            int shift = key % 26;
-
-            foreach (char c in password)
+            string result = "";
+            try
             {
-                if (char.IsLetter(c))
+                OracleConnection conn = Database.Get_Connect();
+                if (conn != null && conn.State == ConnectionState.Open)
                 {
-                    char offset = char.IsUpper(c) ? 'A' : 'a';
-                    int p = c - offset;
-                    int C = (p + shift) % 26;
-                    encrypted.Append((char)(C + offset));
-                }
-                else
-                {
-                    encrypted.Append(c);
+                    string sql = "";
+                    if (encryptType.ToLower() == "additive")
+                    {
+                        sql = "SELECT encode_add(:password, :key) FROM DUAL";
+                    }
+                    else if (encryptType.ToLower() == "multiplicative")
+                    {
+                        sql = "SELECT encode_mul(:password, :key) FROM DUAL";
+                    }
+
+                    using (OracleCommand cmd = new OracleCommand(sql, conn))
+                    {
+                        cmd.Parameters.Add(":password", OracleDbType.Varchar2).Value = password;
+                        cmd.Parameters.Add(":key", OracleDbType.Int32).Value = key;
+
+                        object objResult = cmd.ExecuteScalar();
+                        if (objResult != null)
+                        {
+                            result = objResult.ToString();
+                        }
+                    }
                 }
             }
-            return encrypted.ToString();
-        }
-
-        private int GenerateRandomMultiplicativeKey()
-        {
-            int[] validKeys = { 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 };
-            Random rand = new Random();
-            int index = rand.Next(validKeys.Length);
-            return validKeys[index];
-        }
-
-        private string MaHoaNhan(string plainText, out int key)
-        {
-            key = GenerateRandomMultiplicativeKey();
-            StringBuilder cipherText = new StringBuilder();
-            int actualKey = key % 26;
-
-            foreach (char c in plainText)
+            catch (Exception ex)
             {
-                if (char.IsLetter(c))
+                throw new Exception("Lỗi trong quá trình mã hóa: " + ex.Message);
+            }
+            return result;
+        }
+
+        // Hàm giải mã mật khẩu từ Oracle
+        private string GetDecryptedPassword(string encryptedPassword, string encryptType, int key)
+        {
+            string result = "";
+            try
+            {
+                OracleConnection conn = Database.Get_Connect();
+                if (conn != null && conn.State == ConnectionState.Open)
                 {
-                    char offset = char.IsUpper(c) ? 'A' : 'a';
-                    int p = c - offset;
-                    int C = (p * actualKey) % 26;
-                    cipherText.Append((char)(C + offset));
-                }
-                else
-                {
-                    cipherText.Append(c);
+                    string sql = "";
+                    if (encryptType.ToLower() == "additive")
+                    {
+                        sql = "SELECT decode_add(:encryptedPassword, :key) FROM DUAL";
+                    }
+                    else if (encryptType.ToLower() == "multiplicative")
+                    {
+                        sql = "SELECT decode_mul(:encryptedPassword, :key) FROM DUAL";
+                    }
+
+                    using (OracleCommand cmd = new OracleCommand(sql, conn))
+                    {
+                        cmd.Parameters.Add(":encryptedPassword", OracleDbType.Varchar2).Value = encryptedPassword;
+                        cmd.Parameters.Add(":key", OracleDbType.Int32).Value = key;
+
+                        object objResult = cmd.ExecuteScalar();
+                        if (objResult != null)
+                        {
+                            result = objResult.ToString();
+                        }
+                    }
                 }
             }
-            return cipherText.ToString();
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi trong quá trình giải mã: " + ex.Message);
+            }
+            return result;
         }
 
         private void button2_Click(object sender, EventArgs e)
